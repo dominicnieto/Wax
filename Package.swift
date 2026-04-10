@@ -88,7 +88,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/unum-cloud/USearch.git", from: "2.24.0"),
-        .package(url: "https://github.com/christopherkarani/MetalANNS.git", exact: "0.1.3"),
+        .package(url: "https://github.com/dominicnieto/MetalANNS.git", branch: "production"),
         .package(url: "https://github.com/groue/GRDB.swift.git", from: "7.0.0"),
         .package(url: "https://github.com/swiftlang/swift-testing", exact: "0.12.0"),
         .package(url: "https://github.com/apple/swift-log.git", from: "1.5.0"),
