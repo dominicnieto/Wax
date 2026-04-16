@@ -5,6 +5,8 @@ import Darwin
 import Glibc
 #endif
 
+#if os(macOS) || os(Linux) || targetEnvironment(macCatalyst)
+
 package enum AgentBrokerClient {
     private static let startTimeoutSeconds = configuredSeconds(
         envKey: "WAX_BROKER_START_TIMEOUT_SECS",
@@ -262,3 +264,5 @@ private struct BrokerClientError: LocalizedError {
 
     var errorDescription: String? { message }
 }
+
+#endif

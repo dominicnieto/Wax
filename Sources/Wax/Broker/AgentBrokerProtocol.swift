@@ -202,6 +202,8 @@ package struct AgentBrokerConfiguration: Sendable, Equatable {
     }
 }
 
+#if os(macOS) || os(Linux) || targetEnvironment(macCatalyst)
+
 package enum AgentBrokerPathing {
     package static let defaultStorePath = "~/.wax/memory.wax"
     package static let defaultSessionRootPath = "~/.local/share/waxmcp/sessions"
@@ -343,3 +345,5 @@ package enum AgentBrokerPathing {
         return path
     }
 }
+
+#endif
