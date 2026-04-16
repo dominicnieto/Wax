@@ -1,6 +1,8 @@
 import Foundation
 import WaxCore
 
+#if os(macOS) || os(Linux) || targetEnvironment(macCatalyst)
+
 package actor AgentBrokerService {
     private struct SessionState: Sendable {
         let id: UUID
@@ -1074,3 +1076,5 @@ private extension AgentBrokerValue {
         return string
     }
 }
+
+#endif
